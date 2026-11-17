@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengingat Kuliah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+                <div>
+                    <h2>KuliahKu</h2>
+                    <p>Student Schedule Reminder</p>
+                </div>
+            </div>
+
+            <button class="notification-btn" id="notificationBtn">
+                🔔 Aktifkan Notifikasi
+            </button>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <p class="greeting">STUDENT DASHBOARD</p>
+                <h1>Selamat datang! 👋</h1>
+                <p>Atur jadwal kuliahmu agar tidak ada kelas yang terlewat.</p>
+            </div>
+            <div class="welcome-icon">📚</div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-icon blue">📅</div>
+                <div>
+                    <p>Total Jadwal</p>
+                    <h2 id="totalSchedules">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">⏰</div>
+                <div>
+                    <p>Jadwal Hari Ini</p>
+                    <h2 id="todaySchedules">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">🔔</div>
+                <div>
+                    <p>Pengingat Aktif</p>
+                    <h2 id="activeReminders">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <main class="main-content">
+
+            <section class="schedule-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Jadwal Kuliah</h2>
+                        <p>Daftar seluruh jadwal perkuliahanmu.</p>
+                    </div>
+                    <span class="schedule-count" id="scheduleCount">0 Jadwal</span>
+                </div>
+
+                <div id="scheduleList" class="schedule-list"></div>
+            </section>
+
+            <aside class="form-section">
+                <h2 id="formTitle">Tambah Jadwal</h2>
+                <p>Masukkan informasi mata kuliah.</p>
+
+                <form id="scheduleForm">
+
+                    <input type="hidden" id="editId">
+
+                    <label for="subject">Nama Mata Kuliah</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Contoh: Matematika Teknik"
+                        required
+                    >
+
+                    <label for="lecturer">Nama Dosen</label>
+                    <input
+                        type="text"
+                        id="lecturer"
+                        placeholder="Nama dosen"
+                        required
+                    >
+
+                    <label for="room">Ruang Kelas</label>
+                    <input
+                        type="text"
+                        id="room"
+                        placeholder="Contoh: Lab 2"
+                        required
+                    >
+
+                    <label for="day">Hari Kuliah</label>
+                    <select id="day" required>
+                        <option value="">Pilih hari</option>
+                        <option value="1">Senin</option>
+                        <option value="2">Selasa</option>
+                        <option value="3">Rabu</option>
+                        <option value="4">Kamis</option>
+                        <option value="5">Jumat</option>
+                        <option value="6">Sabtu</option>
+                        <option value="0">Minggu</option>
+                    </select>
+
+                    <label for="time">Jam Mulai</label>
+                    <input type="time" id="time" required>
+
+
+<label for="reminderMinutes">Pengingat Sebelum Kuliah</label>
+
+<select id="reminderMinutes">
+    <option value="5">5 menit sebelumnya</option>
+    <option value="10">10 menit sebelumnya</option>
+    <option value="15" selected>15 menit sebelumnya</option>
+    <option value="30">30 menit sebelumnya</option>
+    <option value="60">1 jam sebelumnya</option>
+    <option value="120">2 jam sebelumnya</option>
+</select>
+
+
+                    <button type="submit" class="save-btn" id="submitBtn">
+                        + Simpan Jadwal
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelBtn"
+                        hidden
+                    >
+                        Batal Edit
+                    </button>
+
+                </form>
+
+                <div class="reminder-info">
+                    <span>💡</span>
+                    <div>
+                        <strong>Pengingat Otomatis</strong>
+                        <p>Notifikasi akan muncul sesuai setting pengingat</p>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>© 2026 KuliahKu · Aplikasi Pengingat Jadwal Kuliah</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

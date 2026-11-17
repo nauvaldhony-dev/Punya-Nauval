@@ -1,0 +1,407 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fc;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 25px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    background: #2563eb;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+
+.brand h2 {
+    font-size: 22px;
+}
+
+.brand p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.notification-btn {
+    background: white;
+    border: 1px solid #dbe3ef;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* WELCOME */
+
+.welcome {
+    background: linear-gradient(120deg, #1d4ed8, #6366f1);
+    color: white;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.greeting {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.welcome-icon {
+    font-size: 75px;
+}
+
+/* STATISTICS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.blue {
+    background: #dbeafe;
+}
+
+.green {
+    background: #dcfce7;
+}
+
+.purple {
+    background: #ede9fe;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.schedule-section,
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 17px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.03);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.section-heading h2,
+.form-section h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.section-heading p,
+.form-section > p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.schedule-count {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* SCHEDULE CARD */
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.schedule-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    padding: 17px;
+    transition: 0.2s;
+}
+
+.schedule-card:hover {
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+}
+
+.schedule-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.schedule-card h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.schedule-time {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.schedule-details {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 8px;
+}
+
+.schedule-day {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 13px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edit-btn {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 45px 15px;
+    color: #94a3b8;
+}
+
+.empty-state div {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+/* FORM */
+
+.form-section label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 17px;
+    margin-bottom: 8px;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe3ef;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13px;
+    background: white;
+    color: #1e293b;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.save-btn {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 9px;
+    margin-top: 23px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+.cancel-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: white;
+    cursor: pointer;
+}
+
+.reminder-info {
+    background: #eff6ff;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+    font-size: 13px;
+}
+
+.reminder-info p {
+    color: #64748b;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 35px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 18px 13px;
+    }
+
+    .header {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .welcome {
+        padding: 25px 20px;
+    }
+
+    .welcome h1 {
+        font-size: 23px;
+    }
+
+    .welcome-icon {
+        font-size: 45px;
+    }
+
+    .schedule-section,
+    .form-section {
+        padding: 18px;
+    }
+}
